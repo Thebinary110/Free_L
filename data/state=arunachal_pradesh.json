@@ -1,0 +1,1247 @@
+{
+  "categories": [
+    "Cat - 1",
+    "Cat - 2"
+  ],
+  "quotas": [
+    {
+      "id": 355,
+      "name": "Cat - 1",
+      "short_name": "Cat - 1",
+      "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+      "master_quota": "Arunachal Pradesh Govt Quota"
+    },
+    {
+      "id": 356,
+      "name": "Cat - 2",
+      "short_name": "Cat - 2",
+      "tooltip_content": "**Eligibility for the Quota : Cat - 2**\n\n**Non APST Category**   \n1. Children of Non-APST State Government employees (or)\n2. Children of employees of AIS / Central Government / Central PSUs serving within Arunachal Pradesh (or)\n3. Others who passed Class XII or equivalent from AP schools and his/her parent(s) resided in Arunachal Pradesh for atleast the last 3(three) years.",
+      "master_quota": "Arunachal Pradesh Govt Quota"
+    }
+  ],
+  "records": [
+    {
+      "id": 451299,
+      "state": "Tripura",
+      "institute": {
+        "id": 1761,
+        "name": "Agartala Government Medical College,Agartala",
+        "short_name": "Agartala Med Coll, Agartala",
+        "logo_url": "https://public.zynerd.com/institutes/1761/logo/Agartala Med Coll, Agartala - Logo.jpg",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 355,
+        "name": "Cat - 1",
+        "short_name": "Cat - 1",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 1\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EAPST Category\u003C/strong\u003E\u003Cbr\u003EAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 1",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "10(2)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 10,
+        "counselling_rank": 10,
+        "ai_rank": 49905,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "56(2)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 56,
+        "counselling_rank": 56,
+        "ai_rank": 145337,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "26(2)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 26,
+        "counselling_rank": 26,
+        "ai_rank": 126761,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "26(2)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 26,
+        "counselling_rank": 26,
+        "ai_rank": 126761,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "cr_2024_4": {
+        "value": "108(1)",
+        "session": "2024",
+        "round": "4",
+        "closing_rank": 108,
+        "counselling_rank": 108,
+        "ai_rank": 229649,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": 228574,
+      "fee": "₹99,900*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "580",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 452046,
+      "state": "Manipur",
+      "institute": {
+        "id": 1808,
+        "name": "Dental College, RIMS, Imphal",
+        "short_name": "Dental College, RIMS, Imphal",
+        "logo_url": null,
+        "district": null
+      },
+      "course": {
+        "id": 157,
+        "name": "BDS",
+        "short_name": "BDS"
+      },
+      "quota": {
+        "id": 355,
+        "name": "Cat - 1",
+        "short_name": "Cat - 1",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 1\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EAPST Category\u003C/strong\u003E\u003Cbr\u003EAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 1",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "69(4)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 69,
+        "counselling_rank": 69,
+        "ai_rank": 162989,
+        "allotments_count": 4,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "77(4)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 77,
+        "counselling_rank": 77,
+        "ai_rank": 173084,
+        "allotments_count": 4,
+        "inservice_candidate": false
+      },
+      "cr_2023_3": {
+        "value": "136(4)",
+        "session": "2023",
+        "round": "3",
+        "closing_rank": 136,
+        "counselling_rank": 136,
+        "ai_rank": 229781,
+        "allotments_count": 4,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "133(4)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 133,
+        "counselling_rank": 133,
+        "ai_rank": 253931,
+        "allotments_count": 4,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "138(4)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 138,
+        "counselling_rank": 138,
+        "ai_rank": 261044,
+        "allotments_count": 4,
+        "inservice_candidate": false
+      },
+      "cr_2024_3": {
+        "value": "117(2)",
+        "session": "2024",
+        "round": "3",
+        "closing_rank": 117,
+        "counselling_rank": 117,
+        "ai_rank": 241986,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "cr_2024_4": {
+        "value": "174(2)",
+        "session": "2024",
+        "round": "4",
+        "closing_rank": 174,
+        "counselling_rank": 174,
+        "ai_rank": 298904,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "cr_2024_5": {
+        "value": "221(2)",
+        "session": "2024",
+        "round": "5",
+        "closing_rank": 221,
+        "counselling_rank": 221,
+        "ai_rank": 361391,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "fee_id": 228579,
+      "fee": "₹2,410*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "Info Not Available",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451294,
+      "state": "Chandigarh",
+      "institute": {
+        "id": 3662,
+        "name": "Dr. Harvansh Singh Judge Institute of Dental Sciences & Hospital, Chandigarh",
+        "short_name": "Dr Harvansh Dental Inst Chandigarh",
+        "logo_url": null,
+        "district": null
+      },
+      "course": {
+        "id": 157,
+        "name": "BDS",
+        "short_name": "BDS"
+      },
+      "quota": {
+        "id": 356,
+        "name": "Cat - 2",
+        "short_name": "Cat - 2",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 2**\n\n**Non APST Category**   \n1. Children of Non-APST State Government employees (or)\n2. Children of employees of AIS / Central Government / Central PSUs serving within Arunachal Pradesh (or)\n3. Others who passed Class XII or equivalent from AP schools and his/her parent(s) resided in Arunachal Pradesh for atleast the last 3(three) years.",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 2\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003ENon APST Category\u003C/strong\u003E\u003Cbr\u003E1. Children of Non-APST State Government employees (or)2. Children of employees of AIS / Central Government / Central PSUs serving within Arunachal Pradesh (or)3. Others who passed Class XII or equivalent from AP schools and his/her parent(s) resided in Arunachal Pradesh for atleast the last 3(three) years.\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 2",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "20(1)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 20,
+        "counselling_rank": 20,
+        "ai_rank": 63034,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "20(1)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 20,
+        "counselling_rank": 20,
+        "ai_rank": 63034,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": 228582,
+      "fee": "₹1,59,405",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "-",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451301,
+      "state": "West Bengal",
+      "institute": {
+        "id": 1780,
+        "name": "Dr. R. Ahmed Dental College & Hospital, Kolkata",
+        "short_name": "Dr R Ahmed Dental Coll,Kolkata",
+        "logo_url": null,
+        "district": null
+      },
+      "course": {
+        "id": 157,
+        "name": "BDS",
+        "short_name": "BDS"
+      },
+      "quota": {
+        "id": 355,
+        "name": "Cat - 1",
+        "short_name": "Cat - 1",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 1\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EAPST Category\u003C/strong\u003E\u003Cbr\u003EAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 1",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "60(1)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 60,
+        "counselling_rank": 60,
+        "ai_rank": 155679,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "72(1)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 72,
+        "counselling_rank": 72,
+        "ai_rank": 167519,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2023_3": {
+        "value": "103(1)",
+        "session": "2023",
+        "round": "3",
+        "closing_rank": 103,
+        "counselling_rank": 103,
+        "ai_rank": 199444,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "108(1)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 108,
+        "counselling_rank": 108,
+        "ai_rank": 229649,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "108(1)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 108,
+        "counselling_rank": 108,
+        "ai_rank": 229649,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_3": {
+        "value": "108(1)",
+        "session": "2024",
+        "round": "3",
+        "closing_rank": 108,
+        "counselling_rank": 108,
+        "ai_rank": 229649,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_4": {
+        "value": "189(1)",
+        "session": "2024",
+        "round": "4",
+        "closing_rank": 189,
+        "counselling_rank": 189,
+        "ai_rank": 314735,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": 228578,
+      "fee": "₹7,800*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "Info Not Available",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 493186,
+      "state": "West Bengal",
+      "institute": {
+        "id": 1780,
+        "name": "Dr. R. Ahmed Dental College & Hospital, Kolkata",
+        "short_name": "Dr R Ahmed Dental Coll,Kolkata",
+        "logo_url": null,
+        "district": null
+      },
+      "course": {
+        "id": 157,
+        "name": "BDS",
+        "short_name": "BDS"
+      },
+      "quota": {
+        "id": 356,
+        "name": "Cat - 2",
+        "short_name": "Cat - 2",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 2**\n\n**Non APST Category**   \n1. Children of Non-APST State Government employees (or)\n2. Children of employees of AIS / Central Government / Central PSUs serving within Arunachal Pradesh (or)\n3. Others who passed Class XII or equivalent from AP schools and his/her parent(s) resided in Arunachal Pradesh for atleast the last 3(three) years.",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 2\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003ENon APST Category\u003C/strong\u003E\u003Cbr\u003E1. Children of Non-APST State Government employees (or)2. Children of employees of AIS / Central Government / Central PSUs serving within Arunachal Pradesh (or)3. Others who passed Class XII or equivalent from AP schools and his/her parent(s) resided in Arunachal Pradesh for atleast the last 3(three) years.\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 2",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2024_1": {
+        "value": "8(1)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 8,
+        "counselling_rank": 8,
+        "ai_rank": 111774,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "8(1)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 8,
+        "counselling_rank": 8,
+        "ai_rank": 111774,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": null,
+      "fee": "-",
+      "stipend_year_1": "-",
+      "bond_years": "-",
+      "bond_penalty": "-",
+      "beds": "Info Not Available",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451300,
+      "state": "Uttar Pradesh",
+      "institute": {
+        "id": 1786,
+        "name": "Faculty of Dental Scienes, KGMU,Lucknow",
+        "short_name": "Faculty of Dental Sci, Lucknow",
+        "logo_url": null,
+        "district": null
+      },
+      "course": {
+        "id": 157,
+        "name": "BDS",
+        "short_name": "BDS"
+      },
+      "quota": {
+        "id": 355,
+        "name": "Cat - 1",
+        "short_name": "Cat - 1",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 1\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EAPST Category\u003C/strong\u003E\u003Cbr\u003EAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 1",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "58(1)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 58,
+        "counselling_rank": 58,
+        "ai_rank": 151061,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "68(1)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 68,
+        "counselling_rank": 68,
+        "ai_rank": 162726,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2023_3": {
+        "value": "120(1)",
+        "session": "2023",
+        "round": "3",
+        "closing_rank": 120,
+        "counselling_rank": 120,
+        "ai_rank": 213074,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2023_4": {
+        "value": "250(1)",
+        "session": "2023",
+        "round": "4",
+        "closing_rank": 250,
+        "counselling_rank": 250,
+        "ai_rank": 369761,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "118(1)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 118,
+        "counselling_rank": 118,
+        "ai_rank": 242140,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "118(1)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 118,
+        "counselling_rank": 118,
+        "ai_rank": 242140,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": 228577,
+      "fee": "₹24,000*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "Info Not Available",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451296,
+      "state": "Chhattisgarh",
+      "institute": {
+        "id": 1796,
+        "name": "Government Dental College, Raipur",
+        "short_name": "Govt Dental Coll, Raipur",
+        "logo_url": null,
+        "district": null
+      },
+      "course": {
+        "id": 157,
+        "name": "BDS",
+        "short_name": "BDS"
+      },
+      "quota": {
+        "id": 355,
+        "name": "Cat - 1",
+        "short_name": "Cat - 1",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 1\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EAPST Category\u003C/strong\u003E\u003Cbr\u003EAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 1",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "65(1)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 65,
+        "counselling_rank": 65,
+        "ai_rank": 161651,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "83(1)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 83,
+        "counselling_rank": 83,
+        "ai_rank": 181430,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "139(1)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 139,
+        "counselling_rank": 139,
+        "ai_rank": 261536,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "139(1)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 139,
+        "counselling_rank": 139,
+        "ai_rank": 261536,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": 228580,
+      "fee": "₹21,800*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "Info Not Available",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451295,
+      "state": "Chhattisgarh",
+      "institute": {
+        "id": 1752,
+        "name": "Late Shri Lakhi Ram Agrawal Memorial Govt. Medical College, Raigarh",
+        "short_name": "Lakhi Ram Agrawal, Raigarh",
+        "logo_url": "https://public.zynerd.com/institutes/1752/logo/456. Lakhi Ram Agrawal, Raigarh - Logo.jpg",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 355,
+        "name": "Cat - 1",
+        "short_name": "Cat - 1",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 1\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EAPST Category\u003C/strong\u003E\u003Cbr\u003EAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 1",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "35(2)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 35,
+        "counselling_rank": 35,
+        "ai_rank": 118282,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "41(2)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 41,
+        "counselling_rank": 41,
+        "ai_rank": 128393,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "cr_2023_3": {
+        "value": "62(1)",
+        "session": "2023",
+        "round": "3",
+        "closing_rank": 62,
+        "counselling_rank": 62,
+        "ai_rank": 160761,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "22(2)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 22,
+        "counselling_rank": 22,
+        "ai_rank": 122058,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "57(2)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 57,
+        "counselling_rank": 57,
+        "ai_rank": 179014,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "cr_2024_4": {
+        "value": "110(2)",
+        "session": "2024",
+        "round": "4",
+        "closing_rank": 110,
+        "counselling_rank": 110,
+        "ai_rank": 230326,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "fee_id": 228575,
+      "fee": "-",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "650",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451381,
+      "state": "Chhattisgarh",
+      "institute": {
+        "id": 1642,
+        "name": "Pt. J N M Medical College, Raipur",
+        "short_name": "Pt JNM Med Coll, Raipur",
+        "logo_url": "https://public.zynerd.com/institutes/1642/logo/484. Pt JNM Med Coll, Raipur - Logo.png",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 356,
+        "name": "Cat - 2",
+        "short_name": "Cat - 2",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 2**\n\n**Non APST Category**   \n1. Children of Non-APST State Government employees (or)\n2. Children of employees of AIS / Central Government / Central PSUs serving within Arunachal Pradesh (or)\n3. Others who passed Class XII or equivalent from AP schools and his/her parent(s) resided in Arunachal Pradesh for atleast the last 3(three) years.",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 2\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003ENon APST Category\u003C/strong\u003E\u003Cbr\u003E1. Children of Non-APST State Government employees (or)2. Children of employees of AIS / Central Government / Central PSUs serving within Arunachal Pradesh (or)3. Others who passed Class XII or equivalent from AP schools and his/her parent(s) resided in Arunachal Pradesh for atleast the last 3(three) years.\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 2",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_3": {
+        "value": "7(1)",
+        "session": "2023",
+        "round": "3",
+        "closing_rank": 7,
+        "counselling_rank": 7,
+        "ai_rank": 32409,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "2(1)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 2,
+        "counselling_rank": 2,
+        "ai_rank": 33604,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "2(1)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 2,
+        "counselling_rank": 2,
+        "ai_rank": 33604,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": null,
+      "fee": "-",
+      "stipend_year_1": "-",
+      "bond_years": "-",
+      "bond_penalty": "-",
+      "beds": "1246",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451380,
+      "state": "Chhattisgarh",
+      "institute": {
+        "id": 1642,
+        "name": "Pt. J N M Medical College, Raipur",
+        "short_name": "Pt JNM Med Coll, Raipur",
+        "logo_url": "https://public.zynerd.com/institutes/1642/logo/484. Pt JNM Med Coll, Raipur - Logo.png",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 355,
+        "name": "Cat - 1",
+        "short_name": "Cat - 1",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 1\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EAPST Category\u003C/strong\u003E\u003Cbr\u003EAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 1",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_3": {
+        "value": "41(1)",
+        "session": "2023",
+        "round": "3",
+        "closing_rank": 41,
+        "counselling_rank": 41,
+        "ai_rank": 128393,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "13(1)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 13,
+        "counselling_rank": 13,
+        "ai_rank": 109997,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "13(1)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 13,
+        "counselling_rank": 13,
+        "ai_rank": 109997,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": null,
+      "fee": "-",
+      "stipend_year_1": "-",
+      "bond_years": "-",
+      "bond_penalty": "-",
+      "beds": "1246",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451293,
+      "state": "Assam",
+      "institute": {
+        "id": 1812,
+        "name": "Regional Dental College, Guwahati",
+        "short_name": "Regional Dental Coll, Guwahati",
+        "logo_url": null,
+        "district": null
+      },
+      "course": {
+        "id": 157,
+        "name": "BDS",
+        "short_name": "BDS"
+      },
+      "quota": {
+        "id": 355,
+        "name": "Cat - 1",
+        "short_name": "Cat - 1",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 1\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EAPST Category\u003C/strong\u003E\u003Cbr\u003EAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 1",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "57(3)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 57,
+        "counselling_rank": 57,
+        "ai_rank": 150909,
+        "allotments_count": 3,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "73(3)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 73,
+        "counselling_rank": 73,
+        "ai_rank": 167968,
+        "allotments_count": 3,
+        "inservice_candidate": false
+      },
+      "cr_2023_3": {
+        "value": "110(3)",
+        "session": "2023",
+        "round": "3",
+        "closing_rank": 110,
+        "counselling_rank": 110,
+        "ai_rank": 204204,
+        "allotments_count": 3,
+        "inservice_candidate": false
+      },
+      "cr_2023_4": {
+        "value": "192(1)",
+        "session": "2023",
+        "round": "4",
+        "closing_rank": 192,
+        "counselling_rank": 192,
+        "ai_rank": 301348,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "120(3)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 120,
+        "counselling_rank": 120,
+        "ai_rank": 242382,
+        "allotments_count": 3,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "120(3)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 120,
+        "counselling_rank": 120,
+        "ai_rank": 242382,
+        "allotments_count": 3,
+        "inservice_candidate": false
+      },
+      "cr_2024_3": {
+        "value": "109(1)",
+        "session": "2024",
+        "round": "3",
+        "closing_rank": 109,
+        "counselling_rank": 109,
+        "ai_rank": 230057,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_4": {
+        "value": "116(1)",
+        "session": "2024",
+        "round": "4",
+        "closing_rank": 116,
+        "counselling_rank": 116,
+        "ai_rank": 241058,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2024_5": {
+        "value": "230(1)",
+        "session": "2024",
+        "round": "5",
+        "closing_rank": 230,
+        "counselling_rank": 230,
+        "ai_rank": 380294,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": 228576,
+      "fee": "-",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "Info Not Available",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451297,
+      "state": "Manipur",
+      "institute": {
+        "id": 1599,
+        "name": "Regional Institute of Medical Sciences, Imphal",
+        "short_name": "RIMS, Imphal",
+        "logo_url": "https://public.zynerd.com/institutes/1599/logo/128.png",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 355,
+        "name": "Cat - 1",
+        "short_name": "Cat - 1",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 1\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EAPST Category\u003C/strong\u003E\u003Cbr\u003EAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 1",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "16(7)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 16,
+        "counselling_rank": 16,
+        "ai_rank": 70033,
+        "allotments_count": 7,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "43(7)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 43,
+        "counselling_rank": 43,
+        "ai_rank": 129325,
+        "allotments_count": 7,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "19(7)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 19,
+        "counselling_rank": 19,
+        "ai_rank": 117279,
+        "allotments_count": 7,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "21(7)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 21,
+        "counselling_rank": 21,
+        "ai_rank": 121987,
+        "allotments_count": 7,
+        "inservice_candidate": false
+      },
+      "cr_2024_4": {
+        "value": "22(1)",
+        "session": "2024",
+        "round": "4",
+        "closing_rank": 22,
+        "counselling_rank": 22,
+        "ai_rank": 122058,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": 228572,
+      "fee": "₹2,410*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "1074",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451303,
+      "state": "Arunachal Pradesh",
+      "institute": {
+        "id": 1797,
+        "name": "Tomo Riba Institute of Health & Medical Sciences, Naharlagun",
+        "short_name": "Tomo Riba IHMS, Naharlagun",
+        "logo_url": "https://public.zynerd.com/institutes/1797/logo/Tomo Riba IHMS, Naharlagun - Logo.png",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 356,
+        "name": "Cat - 2",
+        "short_name": "Cat - 2",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 2**\n\n**Non APST Category**   \n1. Children of Non-APST State Government employees (or)\n2. Children of employees of AIS / Central Government / Central PSUs serving within Arunachal Pradesh (or)\n3. Others who passed Class XII or equivalent from AP schools and his/her parent(s) resided in Arunachal Pradesh for atleast the last 3(three) years.",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 2\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003ENon APST Category\u003C/strong\u003E\u003Cbr\u003E1. Children of Non-APST State Government employees (or)2. Children of employees of AIS / Central Government / Central PSUs serving within Arunachal Pradesh (or)3. Others who passed Class XII or equivalent from AP schools and his/her parent(s) resided in Arunachal Pradesh for atleast the last 3(three) years.\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 2",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "9(8)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 9,
+        "counselling_rank": 9,
+        "ai_rank": 34670,
+        "allotments_count": 8,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "10(8)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 10,
+        "counselling_rank": 10,
+        "ai_rank": 38511,
+        "allotments_count": 8,
+        "inservice_candidate": false
+      },
+      "cr_2023_3": {
+        "value": "15(3)",
+        "session": "2023",
+        "round": "3",
+        "closing_rank": 15,
+        "counselling_rank": 15,
+        "ai_rank": 50509,
+        "allotments_count": 3,
+        "inservice_candidate": false
+      },
+      "fee_id": 228581,
+      "fee": "₹33,000*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "500",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451302,
+      "state": "Arunachal Pradesh",
+      "institute": {
+        "id": 1797,
+        "name": "Tomo Riba Institute of Health & Medical Sciences, Naharlagun",
+        "short_name": "Tomo Riba IHMS, Naharlagun",
+        "logo_url": "https://public.zynerd.com/institutes/1797/logo/Tomo Riba IHMS, Naharlagun - Logo.png",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 355,
+        "name": "Cat - 1",
+        "short_name": "Cat - 1",
+        "tooltip_content": "**Eligibility for the Quota : Cat - 1**\n\n**APST Category**  \nAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Cat - 1\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EAPST Category\u003C/strong\u003E\u003Cbr\u003EAll the APST candidates which also include children of AIS/Central Govt./State Govt. employees belonging to APST\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Arunachal Pradesh Govt Quota"
+      },
+      "category": "Cat - 1",
+      "counselling": {
+        "id": 85,
+        "name": "Arunachal Pradesh - UG Medical",
+        "short_name": "Arunachal Pradesh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "49(33)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 49,
+        "counselling_rank": 49,
+        "ai_rank": 135876,
+        "allotments_count": 33,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "66(33)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 66,
+        "counselling_rank": 66,
+        "ai_rank": 162128,
+        "allotments_count": 33,
+        "inservice_candidate": false
+      },
+      "cr_2023_3": {
+        "value": "74(7)",
+        "session": "2023",
+        "round": "3",
+        "closing_rank": 74,
+        "counselling_rank": 74,
+        "ai_rank": 170132,
+        "allotments_count": 7,
+        "inservice_candidate": false
+      },
+      "cr_2024_1": {
+        "value": "104(85)",
+        "session": "2024",
+        "round": "1",
+        "closing_rank": 104,
+        "counselling_rank": 104,
+        "ai_rank": 217673,
+        "allotments_count": 85,
+        "inservice_candidate": false
+      },
+      "cr_2024_2": {
+        "value": "107(85)",
+        "session": "2024",
+        "round": "2",
+        "closing_rank": 107,
+        "counselling_rank": 107,
+        "ai_rank": 228114,
+        "allotments_count": 85,
+        "inservice_candidate": false
+      },
+      "cr_2024_4": {
+        "value": "57(1)",
+        "session": "2024",
+        "round": "4",
+        "closing_rank": 57,
+        "counselling_rank": 57,
+        "ai_rank": 179014,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": 228573,
+      "fee": "₹33,000*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "500",
+      "choice_id": null,
+      "choice_list_count": 0
+    }
+  ],
+  "rounds": [1, 2, 3, 4, 5]
+}

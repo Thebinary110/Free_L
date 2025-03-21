@@ -1,0 +1,75 @@
+{
+  "categories": [
+    "Open"
+  ],
+  "quotas": [
+    {
+      "id": 375,
+      "name": "North East Open Quota",
+      "short_name": "NE-Open",
+      "tooltip_content": "**Eligibility for the Quota : North East Open Quota**\n\nPermanent Resident/Domicile of one of the 8 (eight) North-eastern states of India including Sikkim (Meghalaya, Assam, Nagaland, Tripura, Mizoram, Arunachal Pradesh, Manipur, Sikkim)",
+      "master_quota": "North East Open Quota"
+    }
+  ],
+  "records": [
+    {
+      "id": 453027,
+      "state": "Meghalaya",
+      "institute": {
+        "id": 1636,
+        "name": "North Eastern Indira Gandhi Regional Instt. of Health and Medical Sciences, Shillong",
+        "short_name": "NEIGRIHMS, Shillong",
+        "logo_url": "https://public.zynerd.com/institutes/1636/logo/NEIGRIHMS, Shillong - Logo.png",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 375,
+        "name": "North East Open Quota",
+        "short_name": "NE-Open",
+        "tooltip_content": "**Eligibility for the Quota : North East Open Quota**\n\nPermanent Resident/Domicile of one of the 8 (eight) North-eastern states of India including Sikkim (Meghalaya, Assam, Nagaland, Tripura, Mizoram, Arunachal Pradesh, Manipur, Sikkim)",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : North East Open Quota\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003EPermanent Resident/Domicile of one of the 8 (eight) North-eastern states of India including Sikkim (Meghalaya, Assam, Nagaland, Tripura, Mizoram, Arunachal Pradesh, Manipur, Sikkim)\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "North East Open Quota"
+      },
+      "category": "Open",
+      "counselling": {
+        "id": 69,
+        "name": "NEIGRIHMS - UG Medical",
+        "short_name": "NEIGRIHMS - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "22(16)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 22,
+        "counselling_rank": 22,
+        "ai_rank": 21556,
+        "allotments_count": 16,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "25(2)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 25,
+        "counselling_rank": 25,
+        "ai_rank": 23442,
+        "allotments_count": 2,
+        "inservice_candidate": false
+      },
+      "fee_id": null,
+      "fee": "-",
+      "stipend_year_1": "-",
+      "bond_years": "-",
+      "bond_penalty": "-",
+      "beds": "594",
+      "choice_id": null,
+      "choice_list_count": 0
+    }
+  ],
+  "rounds": [1, 2]
+}

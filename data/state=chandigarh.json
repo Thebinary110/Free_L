@@ -1,0 +1,259 @@
+{
+  "categories": [
+    "NRI",
+    "GEN",
+    "SC",
+    "GEN-PwD"
+  ],
+  "quotas": [
+    {
+      "id": 358,
+      "name": "Chandigarh NRI Quota",
+      "short_name": "Chandigarh-NRI",
+      "tooltip_content": "**Eligibility for the Quota : Chandigarh NRI Quota**\n\n**MBBS**: NRIs / OCIs / Foreign Indian Student who have resided for 3 years in another country. Split as Priority 1 is Category 1 (Self/parent/ Grandparents Resident for 5 years anytime or Owned immovable property in CG for 5 years before moving out) **and** Priority II is Category II\n\nwhich is Foreign Indian students from other state ancestral Background.\n\n**BDS**: Foreign **Nationals** and NRIs/OCIs or their wards eligible. NRI/OCIs and Wards are as per SC order",
+      "master_quota": "Chandigarh NRI Quota"
+    },
+    {
+      "id": 357,
+      "name": "Chandigarh Govt Quota",
+      "short_name": "Chandigarh-Govt",
+      "tooltip_content": "NRI/OCI Candidates All India Basis as per SC order. Also Foreign is mentioned",
+      "master_quota": "Chandigarh Govt Quota"
+    }
+  ],
+  "records": [
+    {
+      "id": 451386,
+      "state": "Chandigarh",
+      "institute": {
+        "id": 1518,
+        "name": "Government Medical College, Chandigarh",
+        "short_name": "GMC, Chandigarh",
+        "logo_url": "https://public.zynerd.com/institutes/1518/logo/22. GMC, Chandigarh - Logo.png",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 358,
+        "name": "Chandigarh NRI Quota",
+        "short_name": "Chandigarh-NRI",
+        "tooltip_content": "**Eligibility for the Quota : Chandigarh NRI Quota**\n\n**MBBS**: NRIs / OCIs / Foreign Indian Student who have resided for 3 years in another country. Split as Priority 1 is Category 1 (Self/parent/ Grandparents Resident for 5 years anytime or Owned immovable property in CG for 5 years before moving out) **and** Priority II is Category II\n\nwhich is Foreign Indian students from other state ancestral Background.\n\n**BDS**: Foreign **Nationals** and NRIs/OCIs or their wards eligible. NRI/OCIs and Wards are as per SC order",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003E\u003Cstrong\u003EEligibility for the Quota : Chandigarh NRI Quota\u003C/strong\u003E\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EMBBS\u003C/strong\u003E: NRIs / OCIs / Foreign Indian Student who have resided for 3 years in another country. Split as Priority 1 is Category 1 (Self/parent/ Grandparents Resident for 5 years anytime or Owned immovable property in CG for 5 years before moving out) \u003Cstrong\u003Eand\u003C/strong\u003E Priority II is Category II\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003Ewhich is Foreign Indian students from other state ancestral Background.\u003C/p\u003E\n\u003Cbr\u003E\u003Cp\u003E\u003Cstrong\u003EBDS\u003C/strong\u003E: Foreign \u003Cstrong\u003ENationals\u003C/strong\u003E and NRIs/OCIs or their wards eligible. NRI/OCIs and Wards are as per SC order\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Chandigarh NRI Quota"
+      },
+      "category": "NRI",
+      "counselling": {
+        "id": 55,
+        "name": "Chandigarh - UG Medical",
+        "short_name": "Chandigarh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "19(9)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 19,
+        "counselling_rank": 19,
+        "ai_rank": 760450,
+        "allotments_count": 9,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "19(9)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 19,
+        "counselling_rank": 19,
+        "ai_rank": 760450,
+        "allotments_count": 9,
+        "inservice_candidate": false
+      },
+      "fee_id": 245122,
+      "fee": "₹9,12,979*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "-",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451383,
+      "state": "Chandigarh",
+      "institute": {
+        "id": 1518,
+        "name": "Government Medical College, Chandigarh",
+        "short_name": "GMC, Chandigarh",
+        "logo_url": "https://public.zynerd.com/institutes/1518/logo/22. GMC, Chandigarh - Logo.png",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 357,
+        "name": "Chandigarh Govt Quota",
+        "short_name": "Chandigarh-Govt",
+        "tooltip_content": "NRI/OCI Candidates All India Basis as per SC order. Also Foreign is mentioned",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003ENRI/OCI Candidates All India Basis as per SC order. Also Foreign is mentioned\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Chandigarh Govt Quota"
+      },
+      "category": "GEN",
+      "counselling": {
+        "id": 55,
+        "name": "Chandigarh - UG Medical",
+        "short_name": "Chandigarh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "98(95)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 98,
+        "counselling_rank": 98,
+        "ai_rank": 29762,
+        "allotments_count": 95,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "100(97)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 100,
+        "counselling_rank": 100,
+        "ai_rank": 30338,
+        "allotments_count": 97,
+        "inservice_candidate": false
+      },
+      "fee_id": 245121,
+      "fee": "₹24,979*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "-",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451385,
+      "state": "Chandigarh",
+      "institute": {
+        "id": 1518,
+        "name": "Government Medical College, Chandigarh",
+        "short_name": "GMC, Chandigarh",
+        "logo_url": "https://public.zynerd.com/institutes/1518/logo/22. GMC, Chandigarh - Logo.png",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 357,
+        "name": "Chandigarh Govt Quota",
+        "short_name": "Chandigarh-Govt",
+        "tooltip_content": "NRI/OCI Candidates All India Basis as per SC order. Also Foreign is mentioned",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003ENRI/OCI Candidates All India Basis as per SC order. Also Foreign is mentioned\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Chandigarh Govt Quota"
+      },
+      "category": "SC",
+      "counselling": {
+        "id": 55,
+        "name": "Chandigarh - UG Medical",
+        "short_name": "Chandigarh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "236(17)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 236,
+        "counselling_rank": 236,
+        "ai_rank": 271383,
+        "allotments_count": 17,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "236(17)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 236,
+        "counselling_rank": 236,
+        "ai_rank": 271383,
+        "allotments_count": 17,
+        "inservice_candidate": false
+      },
+      "fee_id": 245121,
+      "fee": "₹24,979*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "-",
+      "choice_id": null,
+      "choice_list_count": 0
+    },
+    {
+      "id": 451384,
+      "state": "Chandigarh",
+      "institute": {
+        "id": 1518,
+        "name": "Government Medical College, Chandigarh",
+        "short_name": "GMC, Chandigarh",
+        "logo_url": "https://public.zynerd.com/institutes/1518/logo/22. GMC, Chandigarh - Logo.png",
+        "district": null
+      },
+      "course": {
+        "id": 156,
+        "name": "MBBS",
+        "short_name": "MBBS"
+      },
+      "quota": {
+        "id": 357,
+        "name": "Chandigarh Govt Quota",
+        "short_name": "Chandigarh-Govt",
+        "tooltip_content": "NRI/OCI Candidates All India Basis as per SC order. Also Foreign is mentioned",
+        "tooltip_content_html": "\u003C!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\"\u003E\n\u003Chtml\u003E\u003Cbody\u003E\n\u003Cp\u003ENRI/OCI Candidates All India Basis as per SC order. Also Foreign is mentioned\u003C/p\u003E\n\u003Cbr\u003E\n\u003C/body\u003E\u003C/html\u003E\n",
+        "master_quota": "Chandigarh Govt Quota"
+      },
+      "category": "GEN-PwD",
+      "counselling": {
+        "id": 55,
+        "name": "Chandigarh - UG Medical",
+        "short_name": "Chandigarh - UG Medical"
+      },
+      "cr_2023_1": {
+        "value": "265(1)",
+        "session": "2023",
+        "round": "1",
+        "closing_rank": 265,
+        "counselling_rank": 265,
+        "ai_rank": 535965,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "cr_2023_2": {
+        "value": "265(1)",
+        "session": "2023",
+        "round": "2",
+        "closing_rank": 265,
+        "counselling_rank": 265,
+        "ai_rank": 535965,
+        "allotments_count": 1,
+        "inservice_candidate": false
+      },
+      "fee_id": 245121,
+      "fee": "₹24,979*",
+      "stipend_year_1": "-",
+      "bond_years": "Info Not Available",
+      "bond_penalty": "-",
+      "beds": "-",
+      "choice_id": null,
+      "choice_list_count": 0
+    }
+  ],
+  "rounds": [1, 2]
+}
