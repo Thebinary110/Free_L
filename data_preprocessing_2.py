@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 import ast
-
-# the file to be uploaded from the data_company directory/folder
+import os
 
 # Function to extract 'name' from JSON-like structures
 def extract_name(value):
@@ -32,6 +31,7 @@ uploaded_file = st.file_uploader("Upload Excel file", type=["xlsx"])
 
 if uploaded_file is not None:
     df = pd.read_excel(uploaded_file)
+    original_filename = uploaded_file.name  # Get the original filename with extension
     
     # Check if required columns exist
     if "institute" in df.columns:
@@ -64,9 +64,8 @@ if uploaded_file is not None:
     df_cleaned["quota_name"].fillna(df_cleaned["quota_name"].mode()[0], inplace=True)  # Fill missing quota with mode
     df_cleaned["category"].fillna(df_cleaned["category"].mode()[0], inplace=True)  # Fill missing category with mode
     
-    # Save processed file
-    cleaned_file_path = "cleaned_NEET_data.xlsx"
-    df_cleaned.to_excel(cleaned_file_path, index=False)
+    # Save processed file with the same name as the uploaded file
+    df_cleaned.to_excel(original_filename, index=False)
     
     st.success("✅ Data preprocessing complete!")
-    st.download_button(label="Download Cleaned File", data=open(cleaned_file_path, "rb"), file_name="cleaned_NEET_data.xlsx", mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+    st.download_button(label="Download Cleaned File", data=open(original_filename, "rb"), file_name=original_filename, mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
