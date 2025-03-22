@@ -46,4 +46,4 @@ df_cleaned["category"].fillna(df_cleaned["category"].mode()[0], inplace=True)
 save_path = "./cleaned_data/cleaned_data_gujrat.xlsx" 
 df_cleaned.to_excel(save_path, index=False)
 
-print(f"✅ Data cleaning complete. File saved at: {save_path}")
+print(f"Data cleaning complete. File saved at: {save_path}")

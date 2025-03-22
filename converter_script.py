@@ -3,8 +3,8 @@ import pandas as pd
 import os
 
 
-json_file = "./data/state=bihar.json"
-save_path = r"C:\Users\Dell\Desktop\data_company\NEET_College_Data1.xlsx"
+json_file = "./data/state=all_india.json"
+save_path = r"C:\Users\Dell\Desktop\data_company\NEET_College_Data_all_india.xlsx"
 
 with open(json_file, "r", encoding="utf-8") as file:
     data = json.load(file)
