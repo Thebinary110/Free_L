@@ -64,7 +64,7 @@ if uploaded_file is not None:
     df_cleaned["quota_name"].fillna(df_cleaned["quota_name"].mode()[0], inplace=True)  # Fill missing quota with mode
     df_cleaned["category"].fillna(df_cleaned["category"].mode()[0], inplace=True)  # Fill missing category with mode
     
-    # Save processed file with the same name as the uploaded file
+
     df_cleaned.to_excel(original_filename, index=False)
     
     st.success("✅ Data preprocessing complete!")

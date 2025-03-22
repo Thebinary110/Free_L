@@ -38,19 +38,27 @@
 
         <form id="college-form">
             <div class="mb-3">
-                <label class="form-label">Select Quota:</label>
-                <select class="form-control" id="quota">
-                    <option value="AIQ">All India Quota</option>
+                <label class="form-label">Select Counseling Type:</label>
+                <select class="form-control" id="counseling-type">
+                    <option value="All India">All India Quota</option>
                     <option value="State">State Quota</option>
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="mb-3" id="state-selection" style="display:none;">
                 <label class="form-label">Select State:</label>
-                <select class="form-control" id="state">
-                    <option value="maharashtra">Maharashtra</option>
-                    <option value="tamil_nadu">Tamil Nadu</option>
-                    <option value="karnataka">Karnataka</option>
-                    <option value="delhi">Delhi</option>
+                <select class="form-control" id="state"></select>
+            </div>
+            <div class="mb-3" id="category-selection" style="display:none;">
+                <label class="form-label">Select Category:</label>
+                <select class="form-control" id="category"></select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Select Round:</label>
+                <select class="form-control" id="round">
+                    <option value="1">Round 1</option>
+                    <option value="2">Round 2</option>
+                    <option value="3">Round 3</option>
+                    <option value="4">Round 4</option>
                 </select>
             </div>
             <button type="submit" class="btn w-100">Find Colleges</button>
@@ -61,14 +69,12 @@
             <thead>
                 <tr>
                     <th>College Name</th>
-                    <th>Location</th>
+                    <th>State</th>
                     <th>Closing Rank</th>
-                    <th>Quota</th>
-                    <th>Round</th>
                 </tr>
             </thead>
             <tbody id="college-list">
-                <tr><td colspan="5" class="text-center">Enter details & click Find Colleges</td></tr>
+                <tr><td colspan="3" class="text-center">Enter details & click Find Colleges</td></tr>
             </tbody>
         </table>
     </div>
@@ -76,70 +82,72 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let savedRank = localStorage.getItem("predictedRank");
-            if (savedRank) {
+            if (savedRank && savedRank !== "null") {
                 document.getElementById("display-rank").textContent = `Predicted Rank: ${savedRank}`;
             } else {
+                document.getElementById("display-rank").textContent = "Predicted Rank: Not Available";
                 alert("⚠️ Rank not found! Please predict your rank first.");
                 return;
             }
-    
+
+            fetch("/get_states")
+                .then(response => response.json())
+                .then(data => {
+                    let stateDropdown = document.getElementById("state");
+                    stateDropdown.innerHTML = data.states.map(state => `<option value="${state}">${state}</option>`).join("");
+                });
+
+            document.getElementById("counseling-type").addEventListener("change", function() {
+                let type = this.value;
+                let stateSelection = document.getElementById("state-selection");
+                if (type === "State") {
+                    stateSelection.style.display = "block";
+                } else {
+                    stateSelection.style.display = "none";
+                }
+            });
+
+            document.getElementById("state").addEventListener("change", function() {
+                let selectedState = this.value;
+                document.getElementById("category-selection").style.display = "block";
+                fetch("/get_categories", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ state: selectedState })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    let categoryDropdown = document.getElementById("category");
+                    categoryDropdown.innerHTML = data.categories.map(cat => `<option value="${cat}">${cat}</option>`).join("");
+                });
+            });
+
             document.getElementById("college-form").addEventListener("submit", function(event) {
                 event.preventDefault();
-    
+                let type = document.getElementById("counseling-type").value;
+                let state = type === "All India" ? "All India" : document.getElementById("state").value;
                 let category = document.getElementById("category").value;
-                let quota = document.getElementById("quota").value;
-                let state = document.getElementById("state").value;
                 let round = document.getElementById("round").value;
-    
-                if (!category || !quota || !state || !round) {
-                    alert("⚠️ Please fill all fields before searching.");
-                    return;
-                }
-    
+
                 fetch("/find_colleges", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ 
                         rank: savedRank, 
-                        category: category,  // ✅ FIXED: Now sending category
-                        quota: quota, 
+                        category: category, 
                         state: state, 
-                        round: round  // ✅ FIXED: Now sending round
+                        round: round 
                     })
                 })
                 .then(response => response.json())
                 .then(data => {
                     let collegeList = document.getElementById("college-list");
-                    collegeList.innerHTML = "";
-    
-                    if (data.error) {
-                        alert("❌ Error: " + data.error);
-                        return;
-                    }
-    
-                    if (data.colleges.length === 0) {
-                        collegeList.innerHTML = `<tr><td colspan="5" class="text-center">❌ No colleges found for this rank & filters.</td></tr>`;
-                        return;
-                    }
-    
-                    data.colleges.forEach(college => {
-                        let row = `<tr>
-                            <td>${college.name}</td>
-                            <td>${college.location}</td>
-                            <td>${college.closing_rank}</td>
-                            <td>${college.quota}</td>
-                            <td>${college.round}</td>
-                        </tr>`;
-                        collegeList.innerHTML += row;
-                    });
-                })
-                .catch(error => {
-                    alert("❌ Error fetching data. Check console for details.");
-                    console.error("Fetch Error:", error);
+                    collegeList.innerHTML = data.colleges.length > 0 ?
+                        data.colleges.map(college => `<tr><td>${college.college_name}</td><td>${college.state}</td><td>${college.closing_rank}</td></tr>`).join("") :
+                        `<tr><td colspan="3" class="text-center">❌ No colleges found.</td></tr>`;
                 });
             });
         });
     </script>
-    
 </body>
 </html>
