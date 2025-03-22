@@ -1,452 +1,335 @@
-# app.py - Main FastAPI application
-import os
-import pandas as pd
-from fastapi import FastAPI, Query, HTTPException
-from typing import List, Dict, Optional, Any
-from pydantic import BaseModel
-import json
-from pathlib import Path
-import numpy as np
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-import streamlit as st
+from pydantic import BaseModel
+from typing import List, Optional, Dict, Any, Tuple
+import pandas as pd
+import os
+from enum import Enum
 
-app = FastAPI(title="NEET Counseling Data API")
+app = FastAPI(
+    title="NEET College Explorer API",
+    description="API for exploring NEET college cutoff data",
+    version="1.0.0"
+)
 
-# Add CORS middleware
+# Add CORS middleware to allow Streamlit to connect
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # Allows all origins
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
 )
 
-# Path to data files
-DATA_DIR = Path("cleaned-data 2")
-METADATA_FILE = Path("metadata.json")
+# Define path resolution function
+def resolve_path(path):
+    # Try current directory first
+    if os.path.exists(path):
+        return path
+    
+    # Try parent directory
+    parent_path = os.path.join("..", path)
+    if os.path.exists(parent_path):
+        return parent_path
+    
+    # Try absolute path as last resort
+    abs_path = os.path.abspath(path)
+    if os.path.exists(abs_path):
+        return abs_path
+    
+    # Return original path if all else fails
+    return path
+
+# Define data directory with resolution
+data_dir_options = ["./cleaned_data", "cleaned-data", "."]
+for dir_option in data_dir_options:
+    resolved_dir = resolve_path(dir_option)
+    if os.path.exists(resolved_dir) and any(f.endswith('.xlsx') for f in os.listdir(resolved_dir)):
+        DATA_DIR = resolved_dir
+        break
+else:
+    # Default to the first option if nothing found
+    DATA_DIR = data_dir_options[0]
+
+# Cache for loaded dataframes
+dataframe_cache = {}
+
+def load_data(filename):
+    """Load Excel data with caching"""
+    if filename in dataframe_cache:
+        return dataframe_cache[filename]
+    
+    try:
+        file_path = os.path.join(DATA_DIR, filename)
+        if not os.path.exists(file_path):
+            return None
+        
+        df = pd.read_excel(file_path)
+        dataframe_cache[filename] = df
+        return df
+    except Exception as e:
+        print(f"Error loading {filename}: {str(e)}")
+        return None
 
 # Models
-class FileMetadata(BaseModel):
+class FileInfo(BaseModel):
     filename: str
-    state: str
     columns: List[str]
-    rounds: List[str]
-    quotas: List[str]
-    categories: List[str]
 
-class CounselingQuery(BaseModel):
-    state: str
-    quota: Optional[str] = None
-    category: Optional[str] = None
-    round: Optional[str] = None
-    rank: Optional[int] = None
+class DataResponse(BaseModel):
+    data: List[Dict[str, Any]]
+    total_count: int
 
-# Cache for DataFrames
-df_cache = {}
+class StatisticsResponse(BaseModel):
+    count: int
+    average_cutoff: Optional[float] = None
+    lowest_cutoff: Optional[float] = None
+    distribution: Dict[str, int]
+    top_entries: List[Dict[str, Any]]
 
-def extract_state_name(filename: str) -> str:
-    """Extract state name from filename."""
-    parts = filename.split('_')
-    if len(parts) >= 4:
-        return parts[3].replace('.xlsx', '')
-    return "unknown"
+# Routes
+@app.get("/")
+async def root():
+    return {"message": "Welcome to NEET College Explorer API"}
 
-def identify_college_name_column(df: pd.DataFrame) -> str:
-    """Identify the column that contains college names."""
-    possible_columns = ['college_name', 'name', 'institute', 'college', 'institution']
-    for col in possible_columns:
-        if col in df.columns:
-            return col
-    
-    # If none of the expected columns are found, use the first column
-    # that's not a round, quota, or category
-    for col in df.columns:
-        if not col.startswith('cr_') and col not in ['quota', 'category', 'state']:
-            return col
-    
-    # Fallback to the first column
-    return df.columns[0] if not df.empty else None
+@app.get("/files", response_model=List[str])
+async def get_files():
+    """Get list of available Excel files"""
+    try:
+        excel_files = [f for f in os.listdir(DATA_DIR) if f.endswith('.xlsx')]
+        return excel_files
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error accessing directory: {str(e)}")
 
-def load_and_analyze_file(file_path: Path) -> Dict:
-    """Load Excel file and analyze its structure."""
-    # Read first row to get column structure
-    df_head = pd.read_excel(file_path, nrows=1)
-    columns = df_head.columns.tolist()
-    
-    # Load full data for quota and category extraction
-    df = pd.read_excel(file_path)
-    
-    # Extract rounds (columns starting with 'cr_')
-    rounds = [col for col in columns if col.startswith('cr_')]
-    
-    # Extract quotas and categories (assuming these columns exist)
-    quotas = []
-    categories = []
-    
-    if 'quota' in columns:
-        quotas = df['quota'].dropna().unique().tolist()
-    
-    if 'category' in columns:
-        categories = df['category'].dropna().unique().tolist()
-    
-    state = extract_state_name(file_path.name)
-    
-    # Identify college name column
-    college_name_col = identify_college_name_column(df)
-    
-    # Store dataframe in cache
-    df_cache[file_path.name] = df
+@app.get("/files/{filename}/info", response_model=FileInfo)
+async def get_file_info(filename: str):
+    """Get information about a specific Excel file"""
+    df = load_data(filename)
+    if df is None:
+        raise HTTPException(status_code=404, detail=f"File {filename} not found")
     
     return {
-        "filename": file_path.name,
-        "state": state,
-        "columns": columns,
-        "rounds": rounds,
-        "quotas": quotas,
-        "categories": categories,
-        "college_name_column": college_name_col
+        "filename": filename,
+        "columns": df.columns.tolist()
     }
 
-def analyze_all_files() -> List[Dict]:
-    """Analyze all Excel files in the data directory."""
-    metadata = []
-    for file in DATA_DIR.glob("*.xlsx"):
-        try:
-            file_metadata = load_and_analyze_file(file)
-            metadata.append(file_metadata)
-        except Exception as e:
-            print(f"Error analyzing {file}: {e}")
+@app.get("/files/{filename}/categories")
+async def get_categories(filename: str):
+    """Get unique categories from a file"""
+    df = load_data(filename)
+    if df is None:
+        raise HTTPException(status_code=404, detail=f"File {filename} not found")
     
-    # Save metadata to file for faster startup
-    with open(METADATA_FILE, 'w') as f:
-        json.dump(metadata, f)
-    
-    return metadata
-
-def get_metadata() -> List[Dict]:
-    """Get or create metadata for all files."""
-    if METADATA_FILE.exists():
-        with open(METADATA_FILE, 'r') as f:
-            return json.load(f)
-    else:
-        return analyze_all_files()
-
-# Initialize metadata on startup
-@app.on_event("startup")
-async def startup_event():
-    global file_metadata
-    file_metadata = get_metadata()
-
-# API Endpoints
-@app.get("/states", response_model=List[str])
-def get_states():
-    """Get all available states."""
-    return sorted(list(set(meta["state"] for meta in file_metadata)))
-
-@app.get("/state/{state}/metadata")
-def get_state_metadata(state: str):
-    """Get metadata for a specific state."""
-    for meta in file_metadata:
-        if meta["state"] == state:
-            return meta
-    raise HTTPException(status_code=404, detail=f"State {state} not found")
-
-@app.get("/state/{state}/quotas")
-def get_quotas(state: str):
-    """Get available quotas for a state."""
-    for meta in file_metadata:
-        if meta["state"] == state:
-            return meta["quotas"]
-    raise HTTPException(status_code=404, detail=f"State {state} not found")
-
-@app.get("/state/{state}/categories")
-def get_categories(state: str):
-    """Get available categories for a state."""
-    for meta in file_metadata:
-        if meta["state"] == state:
-            return meta["categories"]
-    raise HTTPException(status_code=404, detail=f"State {state} not found")
-
-@app.get("/state/{state}/rounds")
-def get_rounds(state: str):
-    """Get available rounds for a state."""
-    for meta in file_metadata:
-        if meta["state"] == state:
-            return meta["rounds"]
-    raise HTTPException(status_code=404, detail=f"State {state} not found")
-
-@app.post("/query")
-def query_colleges(query: CounselingQuery):
-    """Query colleges based on dynamic parameters."""
-    # Find the right file
-    filename = None
-    college_name_col = None
-    
-    for meta in file_metadata:
-        if meta["state"] == query.state:
-            filename = meta["filename"]
-            college_name_col = meta.get("college_name_column")
+    # Look for possible category columns
+    category_col = None
+    for col in df.columns:
+        if 'categ' in str(col).lower():
+            category_col = col
             break
     
-    if not filename:
-        raise HTTPException(status_code=404, detail=f"State {query.state} not found")
-    
-    # Get DataFrame from cache or load it
-    if filename not in df_cache:
-        file_path = DATA_DIR / filename
-        df_cache[filename] = pd.read_excel(file_path)
-    
-    df = df_cache[filename].copy()
-    
-    # If college_name_col is not in metadata, identify it
-    if not college_name_col:
-        college_name_col = identify_college_name_column(df)
-    
-    # Apply filters based on query parameters
-    if query.quota:
-        df = df[df['quota'] == query.quota]
-    
-    if query.category:
-        df = df[df['category'] == query.category]
-    
-    if query.round and query.round in df.columns:
-        # Filter out rows where the round column is null
-        df = df[df[query.round].notna()]
-        
-        # If rank is provided, filter colleges where rank is higher than the cutoff
-        if query.rank:
-            df = df[df[query.round] >= query.rank]
-    
-    # Rename college name column for consistency in the API response
-    if college_name_col and college_name_col != 'college_name' and college_name_col in df.columns:
-        df = df.rename(columns={college_name_col: 'college_name'})
-    
-    # Return results
-    return {
-        "total": len(df),
-        "colleges": df.to_dict(orient='records')
-    }
-
-# Endpoint to force refresh metadata
-@app.post("/refresh-metadata")
-def refresh_metadata():
-    """Force refresh of file metadata."""
-    global file_metadata
-    file_metadata = analyze_all_files()
-    # Clear cache
-    df_cache.clear()
-    return {"status": "success", "message": "Metadata refreshed"}
-
-# Set page config
-st.set_page_config(
-    page_title="NEET College Data Explorer",
-    page_icon="🏥",
-    layout="wide"
-)
-
-# Custom CSS
-st.markdown("""
-<style>
-    .main {
-        padding: 2rem;
-    }
-    .stSelectbox label, .stSlider label {
-        font-weight: bold;
-    }
-    .stDataFrame {
-        margin-top: 1rem;
-    }
-    .st-emotion-cache-16txtl3 h1 {
-        margin-bottom: 1.5rem;
-    }
-    .info-box {
-        background-color: #f0f2f6;
-        border-radius: 0.5rem;
-        padding: 1rem;
-        margin-bottom: 1rem;
-    }
-</style>
-""", unsafe_allow_html=True)
-
-# Load metadata
-with open("metadata.json", "r") as f:
-    metadata = json.load(f)
-
-# Title and description
-st.title("NEET College Data Explorer")
-st.markdown("""
-<div class="info-box">
-Explore NEET cutoff ranks across different medical colleges in India. Use the filters below to select your preferred state, category, and admission round.
-</div>
-""", unsafe_allow_html=True)
-
-# Create columns for the main filters
-col1, col2, col3 = st.columns(3)
-
-# Get unique states from metadata
-states = [item["state"] for item in metadata]
-states = sorted(list(set(states)))
-state_display = {state: state.replace("_", " ").title() for state in states}
-
-# State selection
-with col1:
-    selected_state = st.selectbox(
-        "Select State",
-        options=["All States"] + states,
-        index=0,
-        format_func=lambda x: "All States" if x == "All States" else state_display.get(x, x)
-    )
-
-# Find the selected state metadata
-if selected_state == "All States":
-    selected_metadata = next((item for item in metadata if item["state"] == "all"), metadata[0])
-else:
-    selected_metadata = next((item for item in metadata if item["state"] == selected_state), None)
-
-# Get categories for the selected state
-categories = selected_metadata["categories"]
-
-# Category selection
-with col2:
-    selected_category = st.selectbox(
-        "Select Category",
-        options=["All Categories"] + categories,
-        index=0
-    )
-
-# Get rounds for the selected state
-rounds = selected_metadata["rounds"]
-round_display_names = {
-    "cr_2022_1": "2022 Round 1",
-    "cr_2022_2": "2022 Round 2",
-    "cr_2023_1": "2023 Round 1",
-    "cr_2023_2": "2023 Round 2",
-    "cr_2023_3": "2023 Round 3",
-    "cr_2023_4": "2023 Round 4"
-}
-
-# Round selection
-with col3:
-    selected_round = st.selectbox(
-        "Select Round",
-        options=rounds,
-        format_func=lambda x: round_display_names.get(x, x),
-        index=len(rounds)-1  # Select the latest round by default
-    )
-
-# Function to load Excel data
-@st.cache_data
-def load_data(filename):
-    try:
-        return pd.read_excel(filename)
-    except FileNotFoundError:
-        st.error(f"File not found: {filename}")
-        return pd.DataFrame()
-
-# Additional filters in an expander
-with st.expander("Advanced Filters"):
-    # Rank range filter
-    min_rank, max_rank = 1, 100000
-    rank_range = st.slider(
-        "Cutoff Rank Range",
-        min_value=min_rank,
-        max_value=max_rank,
-        value=(min_rank, max_rank)
-    )
-    
-    # Search by college name
-    college_search = st.text_input("Search by College Name")
-
-# Load and display data
-try:
-    filename = selected_metadata["filename"]
-    df = load_data(filename)
-    
-    # Apply basic filters
-    if selected_category != "All Categories":
-        df = df[df["category"] == selected_category]
-    
-    # Filter by rank range
-    df = df[(df[selected_round] >= rank_range[0]) & (df[selected_round] <= rank_range[1])]
-    
-    # Filter by college name search
-    if college_search:
-        df = df[df["college_name"].str.contains(college_search, case=False)]
-    
-    # Select columns to display
-    display_columns = ["college_name", "state", "quota_name", "category", selected_round]
-    
-    # Filter out rows with empty selected_round values
-    df_filtered = df[df[selected_round].notna()]
-    
-    # Sort by selected round (ascending)
-    df_filtered = df_filtered.sort_values(by=selected_round)
-    
-    # Show the data
-    if not df_filtered.empty:
-        # Stats
-        st.subheader("Statistics")
-        stat_col1, stat_col2, stat_col3 = st.columns(3)
-        with stat_col1:
-            st.metric("Number of Colleges", df_filtered["college_name"].nunique())
-        with stat_col2:
-            if not df_filtered[selected_round].empty:
-                st.metric("Average Cutoff Rank", int(df_filtered[selected_round].mean()))
-        with stat_col3:
-            if not df_filtered[selected_round].empty:
-                st.metric("Lowest Cutoff Rank", int(df_filtered[selected_round].min()))
-        
-        # Table
-        st.subheader(f"Cutoff Data for {state_display.get(selected_state, selected_state)} - {round_display_names.get(selected_round, selected_round)}")
-        
-        # Format the dataframe for display
-        display_df = df_filtered[display_columns].copy()
-        display_df = display_df.rename(columns={
-            "college_name": "College Name",
-            "state": "State",
-            "quota_name": "Quota",
-            "category": "Category",
-            selected_round: f"Cutoff Rank ({round_display_names.get(selected_round, selected_round)})"
-        })
-        
-        st.dataframe(display_df, use_container_width=True)
-        
+    if category_col:
+        categories = sorted(df[category_col].dropna().unique().tolist())
+        return {
+            "category_column": category_col,
+            "categories": categories
+        }
     else:
-        st.info("No data available for the selected filters. Please adjust your selection.")
-except Exception as e:
-    st.error(f"Error loading data: {e}")
+        return {
+            "category_column": None,
+            "categories": []
+        }
 
-# Download section
-st.sidebar.title("Download Options")
+@app.get("/files/{filename}/rounds")
+async def get_rounds(filename: str):
+    """Get available rounds from a file"""
+    df = load_data(filename)
+    if df is None:
+        raise HTTPException(status_code=404, detail=f"File {filename} not found")
+    
+    # Find round columns (columns that start with 'cr_')
+    round_cols = [col for col in df.columns if str(col).startswith('cr_')]
+    
+    round_display_names = {
+        col: col.replace('cr_', 'Round ').replace('_', ' ') 
+        for col in round_cols
+    }
+    
+    return {
+        "round_columns": round_cols,
+        "display_names": round_display_names
+    }
 
-if 'df_filtered' in locals() and not df_filtered.empty:
-    csv = df_filtered.to_csv(index=False).encode('utf-8')
-    st.sidebar.download_button(
-        label="Download Results as CSV",
-        data=csv,
-        file_name=f"neet_data_{selected_state}_{selected_round}.csv",
-        mime="text/csv",
-    )
+@app.get("/files/{filename}/data", response_model=DataResponse)
+async def get_data(
+    filename: str,
+    category: Optional[str] = None,
+    round_col: Optional[str] = None,
+    min_rank: Optional[int] = None,
+    max_rank: Optional[int] = None,
+    college_search: Optional[str] = None,
+    page: int = Query(1, ge=1),
+    page_size: int = Query(100, ge=1, le=1000)
+):
+    """Get filtered data from a file"""
+    df = load_data(filename)
+    if df is None:
+        raise HTTPException(status_code=404, detail=f"File {filename} not found")
+    
+    filtered_df = df.copy()
+    
+    # Apply category filter if applicable
+    if category and category != "All Categories":
+        # Find category column
+        category_col = None
+        for col in df.columns:
+            if 'categ' in str(col).lower():
+                category_col = col
+                break
+        
+        if category_col:
+            filtered_df = filtered_df[filtered_df[category_col] == category]
+    
+    # Apply round filter if applicable
+    if round_col and round_col in filtered_df.columns:
+        # Filter by rank range
+        if min_rank is not None:
+            filtered_df = filtered_df[filtered_df[round_col] >= min_rank]
+        
+        if max_rank is not None:
+            filtered_df = filtered_df[filtered_df[round_col] <= max_rank]
+        
+        # Remove rows with empty values in the selected round
+        filtered_df = filtered_df[filtered_df[round_col].notna()]
+    
+    # Apply college name search if applicable
+    if college_search:
+        # Find college name column
+        college_name_cols = [col for col in df.columns if 'name' in str(col).lower() or 'college' in str(col).lower()]
+        if college_name_cols:
+            college_name_col = college_name_cols[0]
+            filtered_df = filtered_df[filtered_df[college_name_col].astype(str).str.contains(college_search, case=False)]
+    
+    # Calculate total count before pagination
+    total_count = len(filtered_df)
+    
+    # Apply pagination
+    start_idx = (page - 1) * page_size
+    end_idx = start_idx + page_size
+    paginated_df = filtered_df.iloc[start_idx:end_idx]
+    
+    # Convert to list of dictionaries
+    data = paginated_df.fillna("").to_dict(orient="records")
+    
+    return {
+        "data": data,
+        "total_count": total_count
+    }
 
-# Information section in sidebar
-st.sidebar.title("About")
-st.sidebar.info("""
-This app provides data for NEET college cutoffs across different states in India.
+@app.get("/files/{filename}/statistics", response_model=StatisticsResponse)
+async def get_statistics(
+    filename: str,
+    category: Optional[str] = None,
+    round_col: Optional[str] = None,
+    min_rank: Optional[int] = None,
+    max_rank: Optional[int] = None,
+    college_search: Optional[str] = None
+):
+    """Get statistics for filtered data"""
+    df = load_data(filename)
+    if df is None:
+        raise HTTPException(status_code=404, detail=f"File {filename} not found")
+    
+    filtered_df = df.copy()
+    
+    # Apply category filter if applicable
+    if category and category != "All Categories":
+        # Find category column
+        category_col = None
+        for col in df.columns:
+            if 'categ' in str(col).lower():
+                category_col = col
+                break
+        
+        if category_col:
+            filtered_df = filtered_df[filtered_df[category_col] == category]
+    
+    # Apply round filter if applicable
+    if round_col and round_col in filtered_df.columns:
+        # Filter by rank range
+        if min_rank is not None:
+            filtered_df = filtered_df[filtered_df[round_col] >= min_rank]
+        
+        if max_rank is not None:
+            filtered_df = filtered_df[filtered_df[round_col] <= max_rank]
+        
+        # Remove rows with empty values in the selected round
+        filtered_df = filtered_df[filtered_df[round_col].notna()]
+    
+    # Apply college name search if applicable
+    if college_search:
+        # Find college name column
+        college_name_cols = [col for col in df.columns if 'name' in str(col).lower() or 'college' in str(col).lower()]
+        if college_name_cols:
+            college_name_col = college_name_cols[0]
+            filtered_df = filtered_df[filtered_df[college_name_col].astype(str).str.contains(college_search, case=False)]
+    
+    # Calculate statistics
+    count = len(filtered_df)
+    average_cutoff = None
+    lowest_cutoff = None
+    distribution = {}
+    top_entries = []
+    
+    if count > 0 and round_col and round_col in filtered_df.columns:
+        # Calculate average and lowest cutoff
+        average_cutoff = float(filtered_df[round_col].mean())
+        lowest_cutoff = float(filtered_df[round_col].min())
+        
+        # Calculate distribution
+        hist_values = filtered_df[round_col].value_counts().sort_index()
+        distribution = {str(k): int(v) for k, v in hist_values.items()}
+        
+        # Get top 10 entries with lowest cutoffs
+        top_df = filtered_df.sort_values(by=round_col).head(10)
+        
+        # Find college name column
+        college_name_col = None
+        college_name_cols = [col for col in df.columns if 'name' in str(col).lower() or 'college' in str(col).lower()]
+        if college_name_cols:
+            college_name_col = college_name_cols[0]
+        
+        if college_name_col:
+            top_entries = top_df[[college_name_col, round_col]].fillna("").to_dict(orient="records")
+        else:
+            top_entries = top_df[[round_col]].fillna("").to_dict(orient="records")
+    
+    return {
+        "count": count,
+        "average_cutoff": average_cutoff,
+        "lowest_cutoff": lowest_cutoff,
+        "distribution": distribution,
+        "top_entries": top_entries
+    }
 
-**Data includes:**
-- College names
-- Categories (Open, SC, ST, OBC, etc.)
-- Cutoff ranks for different rounds
+@app.get("/files/{filename}/range/{round_col}")
+async def get_rank_range(filename: str, round_col: str):
+    """Get min and max rank values for a specific round"""
+    df = load_data(filename)
+    if df is None:
+        raise HTTPException(status_code=404, detail=f"File {filename} not found")
+    
+    if round_col not in df.columns:
+        raise HTTPException(status_code=400, detail=f"Column {round_col} not found in file")
+    
+    # Get min and max values
+    min_val = int(df[round_col].min())
+    max_val = int(df[round_col].max())
+    
+    return {
+        "min_rank": min_val,
+        "max_rank": max_val
+    }
 
-**Note:** Cutoff ranks are from official counseling data from 2022-2023 sessions.
-""")
-
-# Footer
-st.markdown("---")
-st.markdown("""
-<div style="text-align: center; color: #888;">
-NEET College Data Explorer | Made with Streamlit | © 2023
-</div>
-""", unsafe_allow_html=True)
-
-# Run with: uvicorn app:app --reload 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
